@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  endPoint: \"https://7xv8a7m1i2.execute-api.us-east-1.amazonaws.com/\"\n};","map":null,"metadata":{},"sourceType":"module"}
