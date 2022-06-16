@@ -1,0 +1,11 @@
+.col-img-footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 992px){
+    .col-img-footer{
+        justify-content: center;
+    }
+}

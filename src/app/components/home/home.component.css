@@ -1,0 +1,227 @@
+.icon-arrow-back {
+    color: #008ACC;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    z-index: 1000;
+    left: 1.5rem;
+}
+
+.point {
+    background-color: #008ACC;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+}
+
+.container-nav-tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-tab-nav {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 0;
+    transition: none;
+    padding: 1rem 0;
+    transition: 300ms;
+}
+
+.info-nav-text {
+    color: #008ACC;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.link-tab-nav:hover {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid white;
+    color: #666;
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+    isolation: auto;
+}
+
+.link-tab-nav:focus {
+    box-shadow: none;
+    border: 0;
+    isolation: auto;
+}
+
+.link-tab-nav.active {
+    border-bottom: 3px solid #09f;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-weight: 600;
+}
+
+.label-title {
+    color: #444;
+    letter-spacing: -1px;
+}
+
+.label-nit {
+    color: #999;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.label-capa-segmento {
+    color: #444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.container-card-step .row .card {
+    min-height: 210px;
+    cursor: pointer;
+    filter: grayscale(1);
+    border: 1px solid rgba(0, 0, 0, .05);
+    transition: 300ms;
+}
+
+.container-card-step .row .card:hover {
+    filter: grayscale(0.7);
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.container-card-step .row .card.active {
+    filter: grayscale(0);
+    border: 2px solid rgba(0, 0, 0, .125);
+}
+
+.container-card-step .row .card .card-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container-card-step .row .card .card-body .mask-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #008ACC;
+    border-radius: 50px;
+    position: absolute;
+    top: 60px;
+    opacity: 0.33;
+}
+
+.container-card-step .row .card .card-body .label-count {
+    color: #444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.container-card-step .row .card .card-footer {
+    color: #008ACC;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.bar-warning {
+    background-color: #ffebee;
+}
+
+.bar-warning .separator {
+    border-radius: 50px;
+    height: 30px;
+    width: 2px;
+}
+
+.bar-warning p {
+    font-weight: 500;
+}
+
+.tab-content {
+    min-height: 410px;
+}
+
+.icon-info {
+    font-size: 2.5rem;
+    display: flex;
+    width: 33px;
+    height: 33px;
+    align-items: center;
+    font-weight: 200;
+    justify-content: center;
+}
+#section-load {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(256, 256, 256, 0.8);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+@media (min-width:993px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 800px;
+    }
+
+    .container-card-step {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-card-step .row {
+        width: 64%;
+    }
+}
+
+@media (min-width:769px) and (max-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 800px;
+    }
+
+    .container-card-step {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-card-step .row {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-info-client {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .container-card-step .row .card {
+        min-height: 190px;
+    }
+
+    .info-nav-text {
+        font-weight: 600;
+    }
+}

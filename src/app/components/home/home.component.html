@@ -1,0 +1,92 @@
+<app-header [user]="nombreUsuario" [position]="positionUser"></app-header>
+<main>
+    <div class="container">
+        <div class="container-info-client position-relative py-4 px-4" *ngIf="infoCliente">
+            <i class="fas fa-arrow-left icon-arrow-back d-none d-sm-none d-md-none d-lg-block"></i>
+            <ul class="list-group list-group-flush border-0">
+                <li class="list-group-item border-0 d-flex align-items-center justify-content-center">
+                    <h2 class="fw-bold label-title m-0">{{infoCliente.response.nombre}}</h2>
+                </li>
+                <li class="list-group-item py-0 border-0 d-flex align-items-center justify-content-center">
+                    <p class="text-gray uppercase label-nit m-0">NIT: {{infoCliente.response.nit.slice(0, 3) + " " + infoCliente.response.nit.slice(3, 6) + " " + infoCliente.response.nit.slice(6, 9)}}</p>
+                </li>
+                <li class="list-group-item border-0 d-flex align-items-center justify-content-center">
+                    <small class="label-capa-segmento">Capa: {{infoCliente.response.capa}}</small> 
+                    <span class="point mx-3"></span>
+                    <small class="label-capa-segmento">Segmento: {{infoCliente.response.segmento}}</small>
+                </li>
+            </ul>
+            <ul class="nav nav-tabs container-nav-tabs my-3" id="myTab" role="tablist">
+                <li class="nav-item d-none d-sm-none d-md-flex" role="presentation">
+                    <button class="nav-link link-tab-nav active" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#operacion" type="button" role="tab" aria-controls="home"
+                        aria-selected="true">Operacion</button>
+                </li>
+                <li class="nav-item d-none d-sm-none d-md-flex" role="presentation">
+                    <button class="nav-link link-tab-nav" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#indicadores" type="button" role="tab" aria-controls="profile"
+                        aria-selected="false">Indicadores</button>
+                </li>
+                <li class="nav-item d-none d-sm-none d-md-flex" role="presentation">
+                    <button class="nav-link link-tab-nav" id="contact-tab" data-bs-toggle="tab"
+                        data-bs-target="#informacion" type="button" role="tab" aria-controls="contact"
+                        aria-selected="false">Información Cliente</button>
+                </li>
+            </ul>
+            <div class="tab-content mt-4" id="myTabContent">
+                <div class="tab-pane fade show active" id="operacion" role="tabpanel" aria-labelledby="home-tab">
+                    <p class="info-nav-text">
+                        Indique la línea de crédito que quiere reconsiderar
+                    </p>
+                    <div class="container-card-step">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card active" id="cartera-digital" (click)="activateCard('active', $event, 'cartera-digital', 'card')">
+                                    <div class="card-body text-center position-relative">
+                                        <div class="mask-icon"></div>
+                                        <img src="../../../assets/images/credito.png" alt="" width="50%">
+                                        <p class="my-2 label-count">Cartera Ordinaria</p>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        Continuar
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card" id="leasing" (click)="activateCard('active', $event, 'leasing', 'card')">
+                                    <div class="card-body text-center position-relative">
+                                        <div class="mask-icon"></div>
+                                        <img src="../../../assets/images/leasing.png" alt="" width="50%">
+                                        <p class="my-2 label-count">Leasing</p>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        Continuar
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 mt-5">
+                            <div class="bar-warning w-100 px-3 py-2 rounded d-flex align-items-center">
+                                <span class="text-warning icon-info">ⓘ</span>
+                                <span class="separator bg-warning mx-2"></span>
+                                <p class="my-0 text-warning">Las demas lineas de credito no estaran disponibles por el momento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="indicadores" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                <div class="tab-pane fade" id="informacion" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            </div>
+            
+        </div>
+    </div>
+    <section id="section-load" *ngIf="loader">
+        <div class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+    </section>
+</main>

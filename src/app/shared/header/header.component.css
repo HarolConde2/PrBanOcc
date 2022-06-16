@@ -1,0 +1,47 @@
+.label-name {
+    font-weight: 600;
+    text-align: right;
+}
+
+.label-position {
+    color: gray;
+}
+
+.icon-down {
+    background-color: #008ACC;
+    padding: 2px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    left: 42px;
+    top: 30px;
+    font-size: .7rem;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-arrow-back {
+    color: #008ACC;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+@media only screen and (max-width: 992px){
+    .container-data-info {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .container-data-info>div{
+        align-items: center;
+    }
+}
+
